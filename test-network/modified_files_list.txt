@@ -1,0 +1,60 @@
+For 3rd, 4th org(org4):
+test-network/configtx/configtx.yaml
+test-network/docker/docker-compose-ca.yaml
+test-network/docker/docker-compose-couch.yaml
+test-network/docker/docker-compose-test-net.yaml
+test-network/organizations/cryptogen/crypto-config-org3.yaml(created file)
+test-network/organizations/fabric-ca/org3/fabric-ca-server-config.yaml(created)
+test-network/organizations/cryptogen/crypto-config-org4.yaml(created file)
+test-network/organizations/fabric-ca/org4/fabric-ca-server-config.yaml(created)
+test-network/organizations/fabric-ca/org1/fabric-ca-server-config.yaml
+test-network/organizations/fabric-ca/org2/fabric-ca-server-config.yaml
+test-network/organizations/fabric-ca/registerEnroll.sh
+test-network/organizations/ccp-generate.sh
+test-network/scripts/envVar.sh
+test-network/scripts/createChannel.sh
+test-network/scripts/deployCC.sh
+test-network/scripts/setAnchorPeer.sh
+test-network/network.sh
+
+Ports:
+ca_org1: 7054
+ca_org2: 8054
+ca_org3: 10054
+ca_org4: 11054
+ca_orderer: 9054
+
+couchdb0-p0-org1: 5984:5984
+couchdb1-p0.org2: 7984:5984
+couchdb2-p0.org3: 8984:5984
+couchdb3-p0.org4: 9984:5984
+couchdb4-p1-org1: 6984:5984
+couchdb5-p1.org2: 10984:5984
+couchdb6-p1.org3: 11984:5984
+couchdb7-p1.org4: 12984:5984
+
+p0_org1: 7051 p0_cc_org1: 7052
+p1_org1: 8051 p1_cc_org1: 8052
+p0_org2: 9051 p0_cc_org2: 9052
+p1_org2: 12051 p1_cc_org2: 12052
+p0_org3: 10051 p0_cc_org3: 10052
+p1_org3: 13051 p1_cc_org3: 13052
+p0_org4: 11051 p0_cc_org4: 11052
+p1_org4: 14051 p1_cc_org4: 14052
+
+For 2nd peer(peer1):
+docker/docker-compose-couch.yaml
+docker/docker-compose-test-net.yaml
+organizations/cryptogen/crypto-config-org1.yaml
+organizations/cryptogen/crypto-config-org2.yaml
+organizations/cryptogen/crypto-config-org3.yaml
+organizations/cryptogen/crypto-config-org4.yaml
+organizations/fabric-ca/registerEnroll.sh
+organizations/ccp-generate.sh
+organizations/ccp-template.json
+organizations/ccp-template.yaml
+scripts/configUpdate.sh
+scripts/createChannel.sh
+scripts/deployCC.sh
+scripts/envVar.sh
+scripts/setAnchorPeer.sh
